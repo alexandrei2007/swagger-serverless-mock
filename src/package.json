@@ -1,0 +1,22 @@
+{
+  "name": "swagger-serverless-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "require-yml": "^1.3.2",
+    "serverless-http": "^2.0.2",
+    "swagger-express-middleware": "^2.0.2",
+    "swagger-ui-express": "^4.0.7"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-iam-roles-per-function": "^2.0.1"
+  }
+}

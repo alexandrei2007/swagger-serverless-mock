@@ -1,0 +1,26 @@
+service: swagger-serverless-mock
+
+plugins:
+  - serverless-iam-roles-per-function
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, self:custom.defaultStage}
+  region: ${opt:region, self:custom.secrets.REGION}
+  profile: ${opt:region, self:custom.secrets.AWS_PROFILE}
+  stackName: test-china-stack-${self:provider.stage}
+  environment:
+    START_WEBSERVER: false
+
+custom:
+  defaultStage: dev
+  secrets: ${file(secrets.${self:provider.stage}.yml)}
+
+functions:
+  app:
+    handler: index.handler
+    iamRoleStatements: []
+    memorySize: 128
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

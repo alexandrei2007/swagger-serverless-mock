@@ -1,0 +1,9 @@
+{
+    "success": false,
+    "errors": [
+        {
+        "message": "Not found",
+        "key": "error"
+        }
+    ]
+}

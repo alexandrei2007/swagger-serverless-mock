@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nodejs:
+    image: node
+    tty: true
+    stdin_open: true
+    entrypoint:
+    - bash
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app
