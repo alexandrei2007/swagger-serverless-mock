@@ -5,6 +5,7 @@ Enables a swagger mock and documentation using serverless (aws lambda).
 ## Local
 
 ```bash
+cd src
 npm start
 ```
 
